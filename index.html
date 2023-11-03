@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Luas dan Keliling Bangun Datar</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body background="i.jpg">
+    
+    <h1 align = "center" class="judul">MENGHITUNG LUAS DAN KELILING BANGUN DATAR</h1>
+    <h2 align = "center" class="judul1">Pilih Menu berikut untuk Menghitung luas dan keliling bangun datar</h2>
+    <p align = "center" class="judul">Copyright &copy; 2023 by Anggi Alamsyah | All Rights Reserved.</p>
+    <br>
+    <br>
+    <br>
+
+    <!-- Section Design -->
+    <section class="menu">
+
+        <div class="tampilan-container">
+
+            <!-- Luas dan Keliling Persegi Panjang -->
+            <div class="luas-box" id="PP">
+                <h4>PERSEGI PANJANG</h4>
+                <div class="box">
+                    <div class="box1">
+                        <p>
+                            <b>Menghitung Luas Persegi Panjang</b><br>
+                            <b>dan</b><br>
+                            <b>Keliling Persegi Panjang</b><br>
+                        </p>
+                    </div>
+
+                    <table border ="0" cellspacing="10">
+                        <tr>
+                            <td>Panjang</td>
+                            <td>:</td>
+                            <td><input id="angka1" type="text" placeholder="Masukan panjang"></td>
+                        </tr>
+                        <tr>
+                            <td>Lebar</td>
+                            <td>:</td>
+                            <td><input id="angka2" type="text" placeholder="Masukan lebar"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn" onclick="luaspp()">Hitung Luas Persegi Panjang</button>
+                                <button class="btn" onclick="kelilingpp()">Hitung Keliling Persegi Panjang</button>
+                                <button class="btn" onclick="reset()">Reset</button>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="3"><hr></td>
+                        </tr>
+                        <tr>
+                            <td><b>LUAS :</b></td>
+                            <td align="center">
+                                <label for="hasil" id="hasil">0</label>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>KELILING:</b></td>
+                            <td align="center">
+                                <label for="hasil2" id="hasil2">0</label>
+                            </td>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+                
+            <div class="luas-box">
+                <!-- Luas dan Keliling Segitiga -->
+                <h4>SEGITIGA</h4>
+                <div class="box">
+                <div class="box1">
+                    <p>
+                        <b>Menghitung Luas Segitiga</b><br>
+                        <b>dan</b><br>
+                        <b>Keliling Segitiga</b>
+                    </p>
+                </div>
+
+                <table border ="0" cellspacing="10">
+                    <tr>
+                        <td>Sisi 1</td>
+                        <td>:</td>
+                        <td><input id="sisi1" type="text" placeholder="Masukan sisi 1"></td>
+                    </tr>
+                    <tr>
+                        <td>Sisi 2</td>
+                        <td>:</td>
+                        <td><input id="sisi2" type="text" placeholder="Masukan sisi 2"></td>
+                    </tr>
+                    <tr>
+                        <td>Sisi 3</td>
+                        <td>:</td>
+                        <td><input id="sisi3" type="text" placeholder="Masukan sisi 3"></td>
+                    </tr>
+                    <tr>
+                        <td>Alas</td>
+                        <td>:</td>
+                        <td><input id="alas" type="text" placeholder="Masukan alas"></td>
+                    </tr>
+                    <tr>
+                        <td>Tinggi</td>
+                        <td>:</td>
+                        <td><input id="tinggi" type="text" placeholder="Masukan tinggi"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="btn" onclick="luassegitiga()">Hitung Luas Segitiga</button>
+                            <button class="btn" onclick="kelilingsegitiga()">Hitung Keliling Segitiga</button>
+                            <button class="btn" onclick="reset2()">Reset</button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3"><hr></td>
+                    </tr>
+                    <tr>
+                        <td><b>LUAS :</b></td>
+                        <td align="center">
+                            <label for="hasil3" id="hasil3">0</label>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>KELILING:</b></td>
+                        <td align="center">
+                            <label for="hasil4" id="hasil4">0</label>
+                        </td>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+                
+            </div>
+
+            <!-- Luas dan Keliling Lingkaran-->
+            <div class="luas-box">
+                <h4>LINGKARAN</h4>
+                <div class="box">
+                    <div class="box1">
+                        <p>
+                            <b>Menghitung Luas Lingkaran</b><br>
+                            <b>dan</b><br>
+                            <b>Keliling Lingkaran</b><br>
+                        </p>
+                    </div>
+
+                    <table border ="0" cellspacing="10">
+                        <tr>
+                            <td>Jari-jari Lingkaran</td>
+                            <td>:</td>
+                            <td><input id="jr" type="text" placeholder="Masukan jari-jari"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn" onclick="luaslingkaran()">Hitung Luas Lingkaran</button>
+                                <button class="btn" onclick="kelilinglingkaran()">Hitung Keliling Lingkaran</button>
+                                <button class="btn" onclick="reset3()">Reset</button>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="3"><hr></td>
+                        </tr>
+                        <tr>
+                            <td><b>LUAS      :</b></td>
+                            <td align="center">
+                                <label for="hasil5" id="hasil5">0</label>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>KELILING:</b></td>
+                            <td align="center">
+                                <label for="hasil6" id="hasil6">0</label>
+                            </td>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End of Section Design -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
